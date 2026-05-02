@@ -1,81 +1,14 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>理工科考研英语 AI 对话机器人</title>
-  <link rel="stylesheet" href="./style.css" />
+<meta charset="UTF-8">
+<title>AI English Bot</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="app">
-    <header class="topbar">
-      <div>
-        <p class="eyebrow">POSTGRAD ENGLISH AI</p>
-        <h1>理工科考研英语对话机器人</h1>
-      </div>
-      <button id="settingsBtn" class="ghost-btn">设置</button>
-    </header>
-
-    <section class="mode-panel" aria-label="学习模块">
-      <button class="mode active" data-mode="general">综合</button>
-      <button class="mode" data-mode="grammar">语法</button>
-      <button class="mode" data-mode="vocab">单词</button>
-      <button class="mode" data-mode="reading">阅读</button>
-      <button class="mode" data-mode="writing">作文</button>
-    </section>
-
-    <section class="hero">
-      <div class="orbit orbit-a"></div>
-      <div class="orbit orbit-b"></div>
-      <div id="sphere" class="sphere" aria-label="AI 对话主体">
-        <div class="sphere-core"></div>
-        <div class="sphere-glow"></div>
-      </div>
-      <canvas id="waveCanvas" width="360" height="120"></canvas>
-    </section>
-
-    <section class="subtitle" aria-live="polite">
-      <p id="statusText">点击麦克风开始对话，或直接输入问题。</p>
-      <p id="liveText" class="live-text"></p>
-    </section>
-
-    <section id="chatLog" class="chat-log"></section>
-
-    <section class="input-bar">
-      <button id="micBtn" class="mic-btn" aria-label="开始语音输入">🎤</button>
-      <input id="textInput" type="text" placeholder="输入：帮我分析这个长难句 / Translate this sentence..." />
-      <button id="sendBtn" class="send-btn">发送</button>
-    </section>
-
-    <dialog id="settingsDialog" class="settings-dialog">
-      <form method="dialog">
-        <h2>设置</h2>
-        <label>
-          云函数 Chat 地址
-          <input id="apiBaseInput" placeholder="https://你的云函数URL" />
-        </label>
-        <label>
-          声音
-          <select id="voiceSelect">
-            <option value="female">女声</option>
-            <option value="male">男声</option>
-          </select>
-        </label>
-        <label>
-          回复语言风格
-          <select id="languageStyle">
-            <option value="bilingual">中英双语</option>
-            <option value="zh">中文为主</option>
-            <option value="en">英文为主</option>
-          </select>
-        </label>
-        <menu>
-          <button value="cancel">取消</button>
-          <button id="saveSettings" value="default" class="send-btn">保存</button>
-        </menu>
-      </form>
-    </dialog>
-  </main>
-  <script src="./app.js"></script>
+<div id="sphere"></div>
+<div id="subtitle"></div>
+<button onclick="startChat()">开始对话</button>
+<script src="app.js"></script>
 </body>
 </html>
