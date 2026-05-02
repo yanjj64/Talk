@@ -1,0 +1,13 @@
+body {
+  background: black;
+  color: white;
+  text-align: center;
+}
+#sphere {
+  width: 150px;
+  height: 150px;
+  background: cyan;
+  border-radius: 50%;
+  margin: 100px auto;
+  box-shadow: 0 0 50px cyan;
+}
